@@ -16,9 +16,9 @@ app.use(routes)
 
 // const moongose = require('mongoose')
 
-mongoose.connect('mongodb://127.0.0.1:27017/medi-center')
+mongoose.connect('mongodb+srv://gsimphiwe212:jvjeYXesO2IMV9h9@medical-centerdb.xczmp.mongodb.net/?retryWrites=true&w=majority&appName=medical-centerDB')
     .then((res) => console.log('Connection is successfully'))
-    .catch((err) => console.log('MongoDB ran into an error'))
+    .catch((err) => console.log(err, 'MongoDB ran into an error'))
 
 app.listen(PORT, () => {
     console.log(`listening to ${PORT}`)
@@ -31,8 +31,8 @@ const sendFeedback = (req) => {
     let mailTransporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'yourEmail',
-            pass: 'passcode'
+            user: 'gsimphiwe212@gmail.com',
+            pass: 'btjrvhsardknpvam'
         }
     })
 
@@ -57,8 +57,8 @@ const sendPassword = (req) => {
     let mailTransporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'yourEmail',
-            pass: 'passcode'
+            user: 'gsimphiwe212@gmail.com',
+            pass: 'btjrvhsardknpvam'
         }
     })
 
@@ -83,8 +83,8 @@ const sendApprove = (req) => {
     let mailTransporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'yourEmail',
-            pass: 'passcode'
+            user: 'gsimphiwe212@gmail.com',
+            pass: 'btjrvhsardknpvam'
         }
     })
 
